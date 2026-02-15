@@ -12,10 +12,7 @@
 		"noctalia-shell",
 		"noctalia-shell-git"
 	],
-	[
-		"hyprland",
-		"hyprland-git"
-	],
+	"hyprland",
 	"kitty",
 	"dolphin",
 	"gpu-screen-recorder"
