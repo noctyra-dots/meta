@@ -1,0 +1,8 @@
+[
+	["noctyra-dotfiles", "noctyra-dotfiles-git"],
+	["noctyra-cli", "noctyra-cli-git"],
+    ["quickshell","quickshell-git"],
+	"kitty",
+	"dolphin",
+	"gpu-screen-recorder"
+]
