@@ -1,0 +1,28 @@
+name: AUR Publish PKGBUILD & Git
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: AUR Publish
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - pkgbuild: PKGBUILD
+            pkgname: noctyra-meta
+          - pkgbuild: PKGBUILD-git
+            pkgname: noctyra-meta-git
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: KSXGitHub/github-actions-deploy-aur@v4.1.1
+        with:
+          pkgname: ${{ matrix.pkgname }}
+          pkgbuild: ./${{ matrix.pkgbuild }}
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update Noctyra meta package
+          ssh_keyscan_types: rsa,ecdsa,ed25519
