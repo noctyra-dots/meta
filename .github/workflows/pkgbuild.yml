@@ -2,6 +2,11 @@ name: AUR Publish PKGBUILD & Git
 
 on:
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "PKGBUILD"
+      - "PKGBUILD-git"
 
 jobs:
   publish:
