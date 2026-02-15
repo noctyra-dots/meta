@@ -3,10 +3,7 @@
 		"noctyra-dotfiles",
 		"noctyra-dotfiles-git"
 	],
-	[
-		"noctyra-cli",
-		"noctyra-cli-git"
-	],
+	"noctyra-cli-git",
 	[
 		"quickshell",
 		"quickshell-git"
@@ -14,6 +11,10 @@
 	[
 		"noctalia-shell",
 		"noctalia-shell-git"
+	],
+	[
+		"hyprland",
+		"hyprland-git"
 	],
 	"kitty",
 	"dolphin",
